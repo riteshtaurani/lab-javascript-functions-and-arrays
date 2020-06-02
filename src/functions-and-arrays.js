@@ -73,7 +73,7 @@ const wordsUnique = [
 ];
 
 function uniquifyArray (array) {
-  return array.filter((a, b) => array.indexOf(a) === b)
+  return array.filter((a, b) => array.indexOf(a) === b);
 };
 
 // Iteration #6: Find elements
@@ -82,7 +82,7 @@ const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating
 function doesWordExist (array,word){
 
   let result = array.includes(word);
-  return (result)
+  return (result);
 }
 
 
@@ -100,6 +100,14 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+
+function howManyTimes (array,search){
+  
+  var count = array.reduce(function(n, val) {
+      return n + (val === search);
+  }, 0);
+   return count;
+  }
 
 // Iteration #8: Bonus
 
