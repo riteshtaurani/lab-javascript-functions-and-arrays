@@ -15,6 +15,7 @@ const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard',
 
 function findLongestWord (array)
 {
+  if (array.length === 0) return null;
   array.sort(function(a, b) { 
     return b.length - a.length; 
   }); 
@@ -39,9 +40,12 @@ function sumNumbers (array){
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
   function averageNumbers (array){
+
+    if (array.length === 0) return null;
     let sum = sumNumbers(array);
     let result = sum / array.length ;
     return result;
+
   }
 
 // Level 2: Array of strings
@@ -49,7 +53,7 @@ const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smar
 
 function averageWordLength (array)
 {
-  
+  if (array.length === 0) return null;
   let arrayLength = array.length;
   let joined = array.join('');
   let result = joined.length /arrayLength;
@@ -73,6 +77,7 @@ const wordsUnique = [
 ];
 
 function uniquifyArray (array) {
+  if (array.length === 0) return null;
   return array.filter((a, b) => array.indexOf(a) === b);
 };
 
@@ -80,7 +85,7 @@ function uniquifyArray (array) {
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
 function doesWordExist (array,word){
-
+  if (array.length === 0) return null;
   let result = array.includes(word);
   return (result);
 }
